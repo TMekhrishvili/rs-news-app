@@ -9,6 +9,8 @@ import './shared/css/index.css';
 
 axios.defaults.baseURL = 'https://newsapi.org/' //process.env.REACT_APP_API_URL;
 axios.defaults.headers.common['Authorization'] = `Bearer 252f1ab95e8445d7a107b8eca39a02be`//${process.env.REACT_APP_API_KEY}`;
+axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
+axios.defaults.headers.post['Content-Type'] = 'application/json';
 
 ReactDOM.render(
   <Provider store={store}>
