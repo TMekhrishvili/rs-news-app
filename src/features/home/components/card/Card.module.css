@@ -1,11 +1,14 @@
 .cardContainer {
     display: flex;
-    margin: 2rem 0;
-    background-color: white;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    background: #FFF;
+    box-shadow: 0 10px 6px -6px rgb(97, 97, 97), 0 -5px 5px -6px #777;
+    width: 70%;
 }
 
 .imageContainer {
-    width: 30%;
+    width: 45%;
     height: 100%;
 }
 
@@ -16,6 +19,7 @@
 
 .articleContainer {
     width: 70%;
+    padding: 0.2rem 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -24,8 +28,28 @@
 
 .articleTitle {
     text-align: center;
+    font-family: 'Lato', sans-serif;
+    color: rgb(22, 22, 22);
+}
+
+.cardDescription {
+    font-family: 'DM Sans', sans-serif;
 }
 
 .readMore {
     align-self: flex-start;
+}
+
+.articleTitle {
+    font-size: 22px;
+    font-weight: bold;
+    width: 70%;
+    margin: 0.5rem 0;
+}
+
+.readMore {
+    font-size: 22px;
+    font-weight: bold;
+    width: 70%;
+    margin-top: 1rem;
 }

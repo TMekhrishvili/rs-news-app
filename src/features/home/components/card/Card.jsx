@@ -11,7 +11,7 @@ const Card = ({ data }) => {
             </div>
             <div className={style.articleContainer}>
                 <h3 className={style.articleTitle} >{data.title}</h3>
-                <p>{data.description}</p>
+                <p className={style.cardDescription}>{data.description}</p>
                 <Link className={style.readMore} to="#">Read More</Link>
             </div>
 
