@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchArticlesAsync, selectArticles, status, clearState } from './homeSlice';
 import Loader from './components/loader/Loader';
 import Card from './components/card/Card';
 import style from './Home.module.css';
+import down from '../../assets/images/down.png'
 
 const sources = [
     'tesla',
@@ -13,17 +14,29 @@ const sources = [
     'third'
 ]
 
+const NoArticles = () => <p className={style.noArticles}>There are no articles matching your request.</p>
+
 const Home = () => {
     const articles = useSelector(selectArticles);
     const loadingStatus = useSelector(status);
     const dispatch = useDispatch();
     const [searchText, setsearchText] = useState('tesla');
-
+    const ref = useRef(null);
     const handleClick = event => {
         setsearchText(event.target.name);
         dispatch(clearState());
     }
-
+    const handleOpen = () => {
+        const classNames = ref.current.classList;
+        if (classNames.contains(style.opened)) {
+            classNames.add(style.closed);
+            classNames.remove(style.opened);
+        } else {
+            classNames.remove(style.closed);
+            classNames.add(style.opened);
+        }
+        console.log(classNames);
+    }
     useEffect(() => {
         articles.length === 0 &&
             dispatch(fetchArticlesAsync(searchText));
@@ -35,22 +48,31 @@ const Home = () => {
                 <div className={style.titleContainer}>
                     <h1 className={style.title}>news</h1>
                 </div>
-                <div className={style.sourceContainer}                >
-                    {sources.map((value, index) =>
-                        <button
-                            key={index}
-                            onClick={handleClick}
-                            name={value}
-                        >
-                            {value}
-                        </button>
-                    )}
+                <div
+                    ref={ref}
+                    className={style.sourceContainer}
+                    onClick={handleOpen}
+                >
+                    <div className={style.arrowContainer}>
+                        <img className={style.arrow} src={down} alt="arrow-down" />
+                    </div>
+                    <p className={style.selectedSource}>tesla</p>
+                    <ul className={style.ul}>
+                        {sources.map((value, index) =>
+                            <li
+                                key={index}
+                                onClick={handleClick}
+                                name={value}
+                            >
+                                {value}
+                            </li>
+                        )}
+                    </ul>
                 </div>
                 <div className={style.searchContainer}>
                     <input
                         type="text"
                         name="searchText"
-                        placeholder="Search"
                         className={style.search}
                         onChange={event => setsearchText(event.target.value)}
                     />
@@ -65,8 +87,7 @@ const Home = () => {
             {loadingStatus === 'loading' ? <Loader /> :
                 articles.length > 0 ?
                     articles.map((value, index) => <Card key={index} data={value} />) :
-                    <p className={style.noArticles}>There are no articles matching your request.</p>}
-
+                    <NoArticles />}
         </>
     )
 }
