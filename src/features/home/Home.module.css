@@ -62,6 +62,52 @@
     }
 }
 
+.ul {
+    border-top: 2px solid rgb(4, 74, 56);
+    width: 90%;
+    margin: 0 auto;
+    visibility: hidden;
+}
+
+.fadeIn {
+    animation: fade-in 300ms ease-in-out forwards;
+    animation-delay: 0.4s;
+}
+
+.fadeOut {
+    animation: fade-out 100ms ease-in-out forwards;
+}
+
+@keyframes fade-in {
+    from {
+        visibility: hidden;
+        opacity: 0;
+    }
+    1% {
+        visibility: visible;
+        opacity: 0;
+    }
+    to {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        visibility: visible;
+        opacity: 1;
+    }
+    99% {
+        visibility: visible;
+        opacity: 0;
+    }
+    to {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
 .selectedSource {
     font-weight: bold;
     font-size: 20px;
@@ -70,12 +116,6 @@
     margin: 12px 0;
 }
 
-.ul {
-    border-top: 2px solid rgb(4, 74, 56);
-    width: 90%;
-    margin: 0 auto;
-    visibility: hidden;
-}
 .arrowContainer {
     width: 24px;
     height: 24px;

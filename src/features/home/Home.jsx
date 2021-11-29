@@ -22,20 +22,26 @@ const Home = () => {
     const dispatch = useDispatch();
     const [searchText, setsearchText] = useState('tesla');
     const ref = useRef(null);
+    const ref1 = useRef(null);
     const handleClick = event => {
         setsearchText(event.target.name);
         dispatch(clearState());
     }
     const handleOpen = () => {
         const classNames = ref.current.classList;
+        const ulClassNames = ref1.current.classList;
         if (classNames.contains(style.opened)) {
             classNames.add(style.closed);
             classNames.remove(style.opened);
+            ulClassNames.add(style.fadeOut);
+            ulClassNames.remove(style.fadeIn);
         } else {
             classNames.remove(style.closed);
             classNames.add(style.opened);
+            ulClassNames.add(style.fadeIn);
+            ulClassNames.remove(style.fadeOut);
         }
-        console.log(classNames);
+        console.log(ref1);
     }
     useEffect(() => {
         articles.length === 0 &&
@@ -57,7 +63,10 @@ const Home = () => {
                         <img className={style.arrow} src={down} alt="arrow-down" />
                     </div>
                     <p className={style.selectedSource}>tesla</p>
-                    <ul className={style.ul}>
+                    <ul
+                        ref={ref1}
+                        className={style.ul}
+                    >
                         {sources.map((value, index) =>
                             <li
                                 key={index}
