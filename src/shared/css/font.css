@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "George";
+    src: url("../../assets/fonts/George-Regular.eot");
+    src: url("../../assets/fonts/George-Regular.eot?#iefix") format("embedded-opentype"),
+        url("../../assets/fonts/George-Regular.woff2") format("woff2"),
+        url("../../assets/fonts/George-Regular.woff") format("woff"),
+        url("../../assets/fonts/George-Regular.ttf") format("truetype"),
+        url("../../assets/fonts/George-Regular.svg#George-Regular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

@@ -5,6 +5,7 @@ import axios from "axios";
 import { store } from './shared/store';
 import { Provider } from 'react-redux';
 import './shared/css/reset.css';
+import './shared/css/font.css';
 import './shared/css/index.css';
 
 axios.defaults.baseURL = process.env.REACT_APP_API_URL;

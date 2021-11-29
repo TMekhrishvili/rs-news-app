@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import down from '../../../../assets/images/down.png';
 import style from './Sources.module.css';
@@ -17,6 +17,7 @@ const Sources = () => {
     const srcContainer = useRef(null);
     const ul = useRef(null);
     const dispatch = useDispatch();
+    const [selectedSource, setSelectedSource] = useState('tesla');
 
     const handleOpen = () => {
         const classNames = srcContainer.current.classList;
@@ -35,7 +36,7 @@ const Sources = () => {
     }
 
     const handleClick = name => {
-        console.log(name)
+        setSelectedSource(name);
         dispatch(setSearchText(name));
         dispatch(clearState());
     }
@@ -50,7 +51,7 @@ const Sources = () => {
                 <div className={style.arrowContainer}>
                     <img className={style.arrow} src={down} alt="arrow-down" />
                 </div>
-                <p className={style.selectedSource}>tesla</p>
+                <p className={style.selectedSource}>{selectedSource}</p>
                 <ul
                     ref={ul}
                     className={style.ul}
@@ -58,7 +59,9 @@ const Sources = () => {
                     {sources.map((value, index) =>
                         <li
                             key={index}
-                            onClick={event => handleClick(event.target.innerText)}
+                            onClick={event => {
+                                handleClick(event.target.innerText);
+                            }}
                         >
                             {value}
                         </li>
