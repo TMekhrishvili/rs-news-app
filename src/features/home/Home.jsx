@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchArticlesAsync, selectArticles, status } from './homeSlice';
-import Loader from './components/loader/Loader';
+import Loader from '../../shared/loader/Loader';
 import Card from './components/card/Card';
 import style from './Home.module.css';
 import Header from './components/header/Header';

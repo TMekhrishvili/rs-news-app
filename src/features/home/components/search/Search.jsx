@@ -12,6 +12,7 @@ const Search = () => {
         dispatch(setSearchText(input))
         dispatch(clearState());
     }
+    
     return (
         <div className={style.searchContainer}>
             <input

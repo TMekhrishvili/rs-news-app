@@ -1,0 +1,33 @@
+.title {
+    font-size: 28px;
+    margin: 20px auto 30px auto;
+    text-align: center;
+    font-weight: bold;
+    width: 50%;
+}
+
+.imgContainer {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.img {
+    width: 100%;
+    height: auto;
+}
+
+.content {
+    width: 70%;
+    margin: 20px auto;
+}
+
+.articleFooter {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 20px auto;
+}
+
+.bold {
+    font-weight: bold;
+}
