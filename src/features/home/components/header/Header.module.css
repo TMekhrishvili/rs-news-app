@@ -1,0 +1,21 @@
+.header {
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleContainer {
+    width: 100%;
+    background-color: rgb(4, 74, 56);
+}
+
+.title {
+    margin: 12px;
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    text-transform: uppercase;
+}
