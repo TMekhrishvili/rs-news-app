@@ -26,7 +26,7 @@ const Home = () => {
             <Header />
             {loadingStatus === 'loading' ? <Loader /> :
                 articles.length > 0 ?
-                    articles.map((value, index) => <Card key={index} data={value} />) :
+                    <div className={style.cardContainer}>{articles.map((value, index) => <Card key={index} data={value} />)}</div> :
                     <NoArticles />}
         </>
     )
