@@ -4,12 +4,35 @@
     text-align: center;
     font-weight: bold;
     width: 60%;
+    font-family: George;
+    color: #482be7;
+}
+
+.container {
+    padding-bottom: 50px;
+}
+
+.headerContainer {
+    width: 80%;
+    margin: 20px auto;
+    padding: 4px;
+    background-color: #5845a5;
+}
+
+.header {
+    margin: 8px;
+    color: white;
+    font-family: George;
+    font-size: 32px;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .imgContainer {
     width: 70%;
     max-width: 1000px;
     margin: 0 auto;
+    filter: drop-shadow(3px 15px 20px rgba(0, 0, 0, 0.27)) drop-shadow(6px 8px 10px rgba(30, 14, 98, 0.35));
 }
 
 .img {
@@ -28,7 +51,15 @@
     justify-content: space-between;
     width: 70%;
     max-width: 1000px;
-    margin: 20px auto;
+    margin: 0 auto;
+}
+
+.articleFooter p {
+    color: #5845a5;
+}
+
+.articleFooter p span {
+    color: #6b6b6b;
 }
 
 .bold {

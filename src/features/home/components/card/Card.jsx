@@ -5,6 +5,7 @@ import moment from 'moment';
 import news from '../../../../assets/images/news.jpg';
 
 const Card = ({ data }) => {
+    console.log(data.urlToImage)
     return (
         <div className={style.cardContainer}>
             <h3 className={style.articleTitle} >{data.title}</h3>

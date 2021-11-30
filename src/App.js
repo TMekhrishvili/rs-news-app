@@ -8,8 +8,8 @@ const App = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/rs-news-app" element={<Home />} />
-                <Route path="/rs-news-app/:id" element={<Article />} />
+                <Route path="/" element={<Home />} />
+                <Route path="/:id" element={<Article />} />
                 <Route path="*" element={<Page404 />} />
             </Routes>
         </BrowserRouter>

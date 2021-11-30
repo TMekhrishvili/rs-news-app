@@ -9,12 +9,13 @@
 
 .titleContainer {
     width: 100%;
-    background-color: rgb(4, 74, 56);
+    background-color: #5845a5;
 }
 
 .title {
     margin: 12px;
     color: white;
+    font-family: George;
     font-size: 32px;
     text-align: center;
     text-transform: uppercase;

@@ -4,6 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    filter: drop-shadow(3px 15px 20px rgba(0, 0, 0, 0.27)) drop-shadow(6px 8px 10px rgba(30, 14, 98, 0.35));
 }
 
 .search {
@@ -17,16 +18,26 @@
     outline: 0;
     padding: 10px;
     color: white;
-    background-color: rgb(4, 74, 56);
+    background-color: #5845a5;
     cursor: pointer;
+    font-family: George;
 }
 
 .searchButton:hover {
-    background-color: rgb(15, 104, 81);
+    background-color: #5845a5;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 550px) {
     .searchContainer {
         flex-direction: row;
+    }
+    .search {
+        width: 250px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .search {
+        width: 350px;
     }
 }
