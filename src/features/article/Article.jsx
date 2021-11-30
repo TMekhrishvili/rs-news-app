@@ -14,7 +14,6 @@ const Article = () => {
         const fetchArticle = async () => {
             const result = await fetchArticles(params.id);
             setArticle(result.data.articles[0]);
-            console.log(result)
         }
         fetchArticle();
     }, [params.id])

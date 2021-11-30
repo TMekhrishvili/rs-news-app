@@ -10,7 +10,7 @@ const initialState = {
 export const fetchArticlesAsync = createAsyncThunk(
     'home/fetchArticles',
     async (searchText) => {
-        const response = await fetchArticles(searchText || 'tesla');
+        const response = await fetchArticles(searchText || 'apple');
         return response.data;
     }
 );
