@@ -49,3 +49,12 @@
 .bold {
     font-weight: bold;
 }
+
+.smthWrong {
+    text-align: center;
+    font-size: 24px;
+    margin: 25px;
+    text-align: center;
+    font-family: George;
+    color: #482be7;
+}
