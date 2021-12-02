@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { fetchArticles } from './articleAPI';
-import Loader from '../../shared/loader/Loader';
+import Loader from '../../shared/components/loader/Loader';
 import style from './Article.module.css';
 import moment from 'moment';
 import news from '../../assets/images/news.jpg';
@@ -20,9 +20,6 @@ const Article = () => {
 
     return (
         <div>
-            <div className={style.headerContainer}>
-                <Link to="/"><h1 className={style.header}>news</h1></Link>
-            </div>
             {article ?
                 <div className={style.container}>
                     <h1 className={style.title}>{article.title}</h1>

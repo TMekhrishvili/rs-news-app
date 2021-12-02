@@ -1,8 +1,7 @@
 {
-  "name": "rs-news-ap",
+  "name": "rs-news-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://tmekhrishvili.github.io/rs-news-app/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.5.1",
     "@testing-library/jest-dom": "^4.2.4",
@@ -34,9 +33,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"

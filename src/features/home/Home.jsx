@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchArticlesAsync, selectArticles, status } from './homeSlice';
-import Loader from '../../shared/loader/Loader';
+import Loader from '../../shared/components/loader/Loader';
 import Card from './components/card/Card';
 import style from './Home.module.css';
-import Header from './components/header/Header';
 import { searchText } from './searchSlice';
-
+import Search from './components/search/Search';
 
 const NoArticles = () => <p className={style.noArticles}>There are no articles matching your request.</p>
 
@@ -23,7 +22,7 @@ const Home = () => {
 
     return (
         <>
-            <Header />
+            <Search />
             {loadingStatus === 'loading' ? <Loader /> :
                 articles.length > 0 ?
                     <div className={style.cardContainer}>{articles.map((value, index) => <Card key={index} data={value} />)}</div> :

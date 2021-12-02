@@ -12,22 +12,6 @@
     padding-bottom: 50px;
 }
 
-.headerContainer {
-    width: 80%;
-    margin: 20px auto;
-    padding: 4px;
-    background-color: #5845a5;
-}
-
-.header {
-    margin: 8px;
-    color: white;
-    font-family: George;
-    font-size: 32px;
-    text-align: center;
-    text-transform: uppercase;
-}
-
 .imgContainer {
     width: 70%;
     max-width: 1000px;

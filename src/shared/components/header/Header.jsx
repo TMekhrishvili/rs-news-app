@@ -1,7 +1,6 @@
 import React from 'react';
 import style from './Header.module.css';
-import Search from '../search/Search';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -9,7 +8,7 @@ const Header = () => {
             <div className={style.titleContainer}>
                 <Link to="/"><h1 className={style.title}>news</h1></Link>
             </div>
-            <Search />
+            <Outlet />
         </header>
     )
 }
