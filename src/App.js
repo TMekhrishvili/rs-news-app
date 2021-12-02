@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './features/home/Home';
 import Article from './features/article/Article';
 import Page404 from './features/page404/Page404';
-import Header from './features/home/components/header/Header';
+import Header from './shared/components/header/Header';
 
 const App = () => {
     return (
