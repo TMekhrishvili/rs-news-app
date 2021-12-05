@@ -41,8 +41,5 @@ export const homeSlice = createSlice({
 
 
 export const { clearState } = homeSlice.actions;
-export const selectArticles = (state) => state.home.articles;
-export const status = (state) => state.home.status;
-export const error = (state) => state.home.error;
 
 export default homeSlice.reducer;
